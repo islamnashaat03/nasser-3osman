@@ -6,6 +6,7 @@
   --second-color: #255279;
   --text-color :#666666;
   --padding-section:50px 0;
+
 }
 
 
@@ -273,9 +274,54 @@ ul{
   }
 }
 }
+.owl-carousel .owl-stage-outer{
+  direction: ltr;
+  padding: 30px 0;
+}
 
+/* START NAV MOBILE  */
 
+.nav-mobile{
+  position: fixed;
+  top: 0;
+  inset-inline-start: -300px;
+  visibility: hidden;
+  width: 0%;
+  height: 100%;
+  min-height: 10vh;
+  background-color: #fff;
+  z-index: 999;
+  transition: .5s all linear;
+  .heads{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #0000004d;
+    .logo{
+      width: 120px;
+    }
+    .close-icon{
+      font-size: 32px;
+      cursor: pointer;
+      
+    }
+  }
+  &.active{
+    width: 80%;
+    inset-inline-start: 0;
+    transition: .5s all linear;
+    visibility: visible;
 
+  }
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    padding: 15px;
+  }
+}
 
 
 
@@ -346,6 +392,8 @@ nav{
     height: 3px;
     border-radius: 12px;
   }
+
+
 }
 
 
@@ -533,6 +581,47 @@ header{
 }
 
 
+
+/* START GOALS  */
+
+.goals{
+
+  .card{
+    box-shadow: 0  3px 3px #0000002c;
+    border-radius: 16px;
+    overflow: hidden;
+    .image-wrap{
+      height: 300px;
+      img{
+        object-position: top;
+      }
+    }
+    .card-body{
+      text-align: right;
+      /* padding: 10px; */
+      h4{
+        padding: 15px;
+      }
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--main-color);
+        padding: 15px;
+        border-top: 1px solid #0000002c;
+        &::before{
+          content: "\f060";
+          font-family: "Font Awesome 5 Free"; 
+          font-weight: 900;
+
+      }
+    }
+  }
+}
+}
 /* START ACCOUNTS  */
 .accounts{
   .wrapper{
@@ -545,7 +634,7 @@ li a {
   align-items: center;
   gap: 10px;
   i , svg {
-    font-size: 25px;
+    font-size: clamp(20px , 25px , 25px);
     width: 60px;
     aspect-ratio: 1;
     border-radius: 12px;
@@ -557,14 +646,24 @@ li a {
     
   }
   span{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
   }
 }
   }
 }
 
+/* START FOOTER  */
 
+footer{
+  background: var(--gradiant, linear-gradient(180deg, #7C9BAA 0%, #1B4E65 100%));
+  padding: 15px 0;
+  .cont--edit p{
+    text-align: center;
+    display: block;
+    color: #fff;
+  }
+}
 
 
 /* START MEDIA  */
