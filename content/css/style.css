@@ -338,7 +338,7 @@ nav{
     gap: 40px;
   
     .logo{
-        width: 120px;
+        width: 200px;
         flex-shrink: 0;
     }
     .nav-links {

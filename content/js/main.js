@@ -26,8 +26,9 @@ $(document).ready(function () {
         $('.nav-mobile').removeClass('active');
     });
 
-
-
-
+    $('.nav-mobile .nav-links li a').click(function () {
+        console.log('clicked');
+        $('.nav-mobile').removeClass('active');
+    });
 
 });
