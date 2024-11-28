@@ -457,7 +457,7 @@ header{
   }
   .hero-img{
     z-index: 1;
-    /* object-position: top; */
+    object-position: top;
   
   }
   .hero-logo{
