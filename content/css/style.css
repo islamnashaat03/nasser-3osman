@@ -242,6 +242,7 @@ input:-internal-autofill-selected {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 50px;
 
   h2{
     font-size: clamp(1rem, 2.5vw + 1rem, 2rem);
@@ -426,7 +427,7 @@ header{
     font-weight: 400;
   }
   h1{
-    font-size: clamp(2.5rem, 2.5vw + 1rem, 3.2rem);
+    font-size: clamp(1.5rem, 1.5vw + 1rem, 2.2rem);
     line-height: 1.6;
     font-weight: bold;
   }
@@ -456,7 +457,8 @@ header{
   }
   .hero-img{
     z-index: 1;
-    object-position: top;
+    /* object-position: top; */
+  
   }
   .hero-logo{
     z-index: 2;
@@ -486,8 +488,10 @@ header{
     align-items: center;
     gap: 30px;
     position: relative;
-    margin-bottom: 100px;
-    
+    &:not(:last-child){
+      margin-bottom: 100px;
+      
+    }
     .info{
       display: flex;
       flex-direction: column;
@@ -564,7 +568,6 @@ header{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 50px 0;
     li{
       flex: 1 1 48%;
       background: #fff;
@@ -591,9 +594,10 @@ header{
     border-radius: 16px;
     overflow: hidden;
     .image-wrap{
-      height: 300px;
+      height: 250px;
       img{
-        object-position: top;
+        /* object-position: top; */
+        object-fit: contain;
       }
     }
     .card-body{
@@ -601,6 +605,10 @@ header{
       /* padding: 10px; */
       h4{
         padding: 15px;
+        height: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       a{
         display: flex;
@@ -626,13 +634,13 @@ header{
 .accounts{
   .wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(clamp(125px, 30%, 350px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(clamp(125px, 48%, 450px), 1fr));
     gap:20px;
-    padding: var(--padding-section);
-li a {
+li div  {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 15px;
   i , svg {
     font-size: clamp(20px , 25px , 25px);
     width: 60px;
@@ -645,10 +653,21 @@ li a {
     justify-content: center;
     
   }
+  a{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   span{
     font-size: 17px;
     font-weight: bold;
   }
+}
+
+li p{
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
 }
   }
 }
