@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    new WOW().init();
-
+    if (window.matchMedia("(max-width: 768px)").matches) {  
+        $('.goals .goals-wrapper').removeClass('owl-carousel');
+        $('.goals .goals-wrapper').removeClass('owl-theme');
+        $('.goals .goals-wrapper').addClass('wrapper');
+    }
     // Initialize Owl Carousel
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -22,4 +25,9 @@ $(document).ready(function () {
     $('.close-icon').click(function () {
         $('.nav-mobile').removeClass('active');
     });
+
+
+
+
+
 });
